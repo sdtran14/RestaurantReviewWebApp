@@ -24,7 +24,7 @@ public class JDBCConnector {
 	    
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 
 	        st = conn.prepareStatement("SELECT * FROM Users WHERE Email = ?");
 	        st.setString(1, email);
@@ -63,7 +63,7 @@ public class JDBCConnector {
 	    
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 
 	        st = conn.prepareStatement("SELECT * FROM Users WHERE Username = ?");
 	        st.setString(1, username);
@@ -100,7 +100,7 @@ public class JDBCConnector {
 	    
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 
 	        st = conn.prepareStatement("INSERT INTO Favorites (User_ID, Restaurant_ID) " +
 	                   "SELECT Users.User_ID, Restaurants.Restaurant_ID " +
@@ -138,7 +138,7 @@ public void removeNewReservation(String username, String r_name) throws ClassNot
 	    
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 	        String uid = getUserID(username);
 	        String rid = getRestaurantID(r_name);
 	        st = conn.prepareStatement("DELETE FROM Reservations WHERE User_ID = ? AND Restaurant_ID = ?;");
@@ -173,7 +173,7 @@ public void insertNewReservation(String username, String r_name, String date, St
 	    
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 	        String uid = getUserID(username);
 	        String rid = getRestaurantID(r_name);
 	        st = conn.prepareStatement("INSERT INTO Reservations (User_ID, Restaurant_ID, Time, Date, Description) VALUES (?, ?, ?, ?, ?);");
@@ -213,7 +213,7 @@ public void removeNewFavorite(String username, String r_name) throws ClassNotFou
 	    
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 
 	        st = conn.prepareStatement("DELETE FROM Favorites " +
 	                   "WHERE User_ID = (SELECT User_ID FROM Users WHERE Username = ?) " +
@@ -249,7 +249,7 @@ public void removeNewFavorite(String username, String r_name) throws ClassNotFou
 	    try {
 	    	ResultSet rs = null;
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 
 	        st = conn.prepareStatement("SELECT * FROM Restaurants WHERE Name = ?");
 	        st.setString(1, r.name);
@@ -295,7 +295,7 @@ public void removeNewFavorite(String username, String r_name) throws ClassNotFou
 	  
 	  try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 		
 		st = conn.prepareStatement("INSERT INTO Users (Username, UserPassword, Email) VALUES (?, ?, ?);");
 		st.setString(1, username);
@@ -334,7 +334,7 @@ public void removeNewFavorite(String username, String r_name) throws ClassNotFou
 
       try {
     	  Class.forName("com.mysql.cj.jdbc.Driver");
-    	  Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+    	  Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
           String sql = "SELECT User_ID FROM Users WHERE Username = ?";
           PreparedStatement preparedStatement = connection.prepareStatement(sql);
           preparedStatement.setString(1, username);
@@ -358,7 +358,7 @@ public String getRestaurantID(String rname) throws ClassNotFoundException {
 
       try {
     	  Class.forName("com.mysql.cj.jdbc.Driver");
-    	  Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+    	  Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
           String sql = "SELECT Restaurant_ID FROM Restaurants WHERE Name = ?";
           PreparedStatement preparedStatement = connection.prepareStatement(sql);
           preparedStatement.setString(1, rname);
@@ -381,7 +381,7 @@ public String getReservationRestaurants(String userID)
 	    
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 
 	        st = conn.prepareStatement("SELECT r.Restaurant_ID, r.time, r.date, r.description, res.* FROM reservations r JOIN Restaurants res ON r.Restaurant_ID = res.Restaurant_ID WHERE r.User_ID = ?;");
 	        st.setString(1, userID);
@@ -454,7 +454,7 @@ public String getReservationRestaurants(String userID)
 	    
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+	        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 
 	        st = conn.prepareStatement("SELECT r.* FROM Restaurants r INNER JOIN Favorites f ON r.Restaurant_ID = f.Restaurant_ID WHERE f.User_ID = ?;");
 	        st.setString(1, userID);
@@ -523,7 +523,7 @@ public boolean validateUser(String username, String password) {
     
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=conthoSQL123");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost/JoesTable?user=root&password=PASSWORD");
 
         st = conn.prepareStatement("SELECT Username, UserPassword FROM JoesTable.Users WHERE Username = ? AND UserPassword = ?");
         st.setString(1, username);
