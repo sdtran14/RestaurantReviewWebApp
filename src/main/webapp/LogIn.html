@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login/Signup Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+       <link rel="stylesheet" type="text/css" href="Login.css">
+       <link rel="stylesheet" type="text/css" href="fonts/font-awesome.min.css">
+    	
+</head>
+<body>
+	
+    <a href="Home.html" class = "option2">Home</a>
+		 <a href="Login.html" class = "option1">Login/Signup</a>
+
+	
+    
+     <div class = "hide_area">
+    <a class="reset-button" href="Home.html">JoesTable!</a>
+    </div>
+    <hr class="main-line">
+    
+    
+    <div class="container">
+        
+        <div class="form-section">
+            <h3>Login</h3>
+            <div class="error_msg" id="login_msg"></div>
+            <form method="post" id="LoginForm">
+                <label for="login_username">Username</label>
+                <input type="text" id="login_username" required>
+                
+                <label for="login_password">Password</label>
+                <input type="password"  id="login_password" required>
+                
+                <button type="submit"><i class="fa fa-sign-in"></i> Sign In</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h3>Sign Up</h3>
+            <div class="error_msg" id="signup_msg"></div>
+            <form  id="SignUpForm">
+                <label for="email">Email</label>
+                <input type="email" name="email" id ="email"  required>
+                
+                <label for="username">Username</label>
+                <input type="text" name="username" id ="username" required>
+                
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password"  required>
+                
+                <label for="verifyPassword">Confirm Password</label>
+                <input type="password" id="verifyPassword"  required>
+                
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I have read and agree to all terms and conditions of JoesTable.</label>
+                
+                <button type="submit"> <i class="fa fa-user-plus"></i> Create Account</button>
+            </form>
+        </div>
+    </div>
+    <script src="Login.js"></script>
+
+</body>
+</html>
+ 	

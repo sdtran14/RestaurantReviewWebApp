@@ -1,0 +1,502 @@
+
+.hide_area
+{
+	display: block;
+}
+
+       #map-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+        #map {
+            width: 60%;
+            height: 60%;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+.main-line 
+{
+	margin-top:7vw;
+}
+
+
+ body {
+            margin: 0;
+            padding: 0;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            font-family: 'Arial', sans-serif; /* Your specific font */
+            color: dimgrey;
+            margin-bottom: 2vw;
+			text-decoration: none;
+        }
+        
+        .option1 
+        {
+			
+			display: block;
+			position:absolute;
+			font-family: Arial, sans-serif;
+			color: dimgrey;
+			text-decoration: none;
+			top: 3vw;
+			right: 5vw;
+			
+			
+		}
+		.option2
+        {
+			display: block;
+			position:absolute;
+			font-family: Arial, sans-serif;
+			color: dimgrey;
+			text-decoration: none;
+			top: 3vw;
+			right: 12vw;
+			
+			
+		}
+		.option3
+        {
+			display: block;
+			position:absolute;
+			font-family: Arial, sans-serif;
+			color: dimgrey;
+			text-decoration: none;
+			top: 3vw;
+			right: 22vw;
+			
+			
+		}
+		.option4
+        {
+			display: block;
+			position:absolute;
+			font-family: Arial, sans-serif;
+			color: dimgrey;
+			text-decoration: none;
+			top: 3vw;
+			right: 32vw;
+			
+			
+		}
+        .divider
+        {
+			margin-top: 1vw; 
+            margin-bottom: 1vw; 
+            width: 100%;
+		}
+        .banner {
+            
+	        width: 90%; 
+            display: block; 
+            margin: 3vw auto; 
+            border-radius: 2vw;
+            
+        }
+.res_text 
+{
+	text-align: left;
+	margin-left:10vw;
+	margin-bottom: 0vw;
+	font-size: 2.3vw;
+}
+.reset-button {
+            font-family: 'Galada', cursive;
+            color: rgb(205, 46, 32); 
+            cursor: pointer;
+            position: absolute;
+            font-size: 3vw;
+            top: 2vw;
+            text-decoration: none;
+            left: 2vw;
+            display: flex;
+        }
+        
+nav ul {
+    display: flex;
+    justify-content: flex-end; 
+    text-justify: top;
+    position: absolute;
+    top: 2vw;
+    right: 3vw; 
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2vw;
+}
+
+nav ul li a {
+	
+    text-decoration: none;
+    color: #888; 
+    font-size: 1.2vw;
+}
+
+
+.search-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    padding: 20px; 
+    
+}
+
+.grid-container {
+            display: grid;
+            grid-template-columns: 65% 35%; 
+            width:90vw;
+            height:7vw;
+            margin: 0 auto;
+            grid-template-rows: 50% 50%; 
+            grid-gap: 0vw;
+            
+        }
+        .grid-container label 
+        {
+			font-size: 0.8vw;
+		}
+		.grid-container input[type="radio"] 
+		{
+			width: 0.8vw;
+			height: 0.8vw;
+		}
+
+   
+        .grid-item {
+            
+            padding: 0.4vw; 
+        }
+
+
+        .item1 {
+            grid-column: 1 / 2; 
+            grid-row: 1 / 2; 
+            align-items: left;
+        }
+        .item1 button
+        {
+			padding: 0.5vw;
+			width: 5vw;
+			border-radius: 0.4vw;
+			box-shadow: none;
+		}
+
+        .item2 {
+			
+			font-size: 1vw;
+            grid-column: 2 / 3; 
+            grid-row: 1 / 2; 
+            display: grid;
+            grid-template-columns: 50% 50%; 
+            grid-template-rows: 50% 50%; 
+            text-align: left;
+            text-justify: center;
+            
+            
+        }
+        .item20
+        {
+			
+			 grid-column: 1 / 2;
+			 grid-row: 1 / 2;
+			 margin-right : 5vw;
+		}
+		.item21
+        {
+			grid-row: 1 / 2;
+			 grid-column: 2 / 3;
+			 margin-right : 5vw;
+		}
+		.item22
+        {
+			grid-row: 2 / 3;
+			 grid-column: 1 / 2;
+			 margin-right : 5vw;
+		}
+
+		.item23
+        {
+			grid-row: 2 / 3;
+			 grid-column: 2 / 3;
+			 margin-right : 5vw;
+		}
+        .item3 {
+			
+			 align-items: left;
+            grid-column: 1 / 2; 
+            grid-row: 2 / 3; 
+        }
+
+        .item4 {
+			
+            grid-column: 2 / 3; 
+            grid-row: 2 / 3; 
+        }
+        
+.grid-item.item4 button
+{
+	border-radius: 0.4vw;
+	 height: calc(90%);
+	 width: calc(90%);
+}
+.grid-item.item3 input[type="text"] 
+{
+	position: relative;
+	 height: 90%;
+	 width: 45%;
+	 text-align: left;
+	 padding: 1px;
+	 left: -1vw;
+
+}
+.grid-item.item1 input[type="text"]
+{
+	position: relative;
+	
+    width: 80%; 
+    height: 90%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    left: -3vw;
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+    width: calc(50% - 5vw); 
+    margin-bottom: 10px; 
+}
+
+.top-left,
+.bottom-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-left input,
+.bottom-left input {
+    width: calc(100% - 10px); 
+    margin-bottom: 10px; 
+}
+
+.top-right,
+.bottom-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.top-right label,
+.bottom-right button {
+    margin-bottom: 10px; 
+}
+
+/*.search-result {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column; 
+}
+
+.image-container {
+    width: 100px; 
+    height: 100px; 
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px; 
+}
+
+.restaurant-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.result-content {
+    text-align: left;
+    flex: 1;
+}
+
+.search-result hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: 100%; 
+    margin: 10px 0; 
+}
+*/
+
+
+.image-container {
+    width: 20vw; 
+    height: 20vw; 
+    overflow: hidden;
+    margin: 1vw auto;
+    border-radius: 1vw;
+    margin-left: 2vw;
+}
+
+.search-result {
+    display: flex;
+    align-items: left;
+    padding: 10px;
+    flex-direction: column; 
+    width: 80%;
+    margin: 0 auto;
+  	
+}
+
+.restaurant-image {
+    width: 20vw; 
+    height: 20vw; 
+   border-radius: 1vw;
+   cursor: pointer;
+    
+}
+
+.result-content h4{
+	font-size: 1.3vw;
+}
+.result-content p{
+	font-size: 1.2vw;
+}
+        .link
+        {
+	font-size: 1.2vw;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+			color: dimgrey;
+			text-decoration: none;
+}
+.deat-content p{
+	margin: 2vw;
+	font-size: 1.2vw;
+}
+.result-content {
+    flex: 1;
+    position: absolute;
+    left: 37vw;
+    margin-top:3vw;
+    text-align: left;
+    align-items: left;
+    font-family: Arial, sans-serif;
+			color: dimgrey;
+			text-decoration: none;
+}
+.deat-content {
+    flex: 1;
+    position: absolute;
+    left: 37vw;
+    margin-top:3vw;
+    text-align: left;
+    align-items: left;
+}
+
+
+
+.search-result hr {
+	
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: 100%; 
+    margin: 0.3w 0;
+}
+
+
+.favor 
+{
+	width: 80%;
+	margin:0 auto;
+	
+    position:absolute;
+    top:47vw;
+    left:10%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(84, 85, 85);
+    background-color: gold;
+    display: 'none';
+}
+.reservationDate
+{
+	position: absolute;
+	width: 38%;
+	top:53vw;
+	padding: 0.5vw;
+	margin: 0.5vw;
+	left:9vw;
+	display: none;
+}
+.reservationTime
+{
+	position: absolute;
+	width: 38%;
+	top:53vw;
+	right:9vw;
+	padding: 0.5vw;
+	margin: 0.5vw;
+	display: none;
+}
+.reservationDesc
+{
+	position: absolute;
+	width: 79%;
+	height: 13%;
+	left:10vw;
+	top:58vw;
+	padding: 0.5vw;
+	margin-bottom: 5vw;
+	display: none;
+}
+
+.reservationSub
+{
+	position: absolute;
+	width: 80%;
+	height: 4%;
+	color: white;
+	background-color: firebrick;
+	top:68vw;
+	left:10%;
+	padding: 0.5vw;
+	margin-bottom: 5vw;
+	display: none;
+	
+	
+}
+.reserve
+{
+	
+	margin:0 auto;
+    width: 80%;
+    position:absolute;
+    top:50vw;
+    left:10%;
+
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: firebrick;
+}

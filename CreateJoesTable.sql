@@ -1,0 +1,56 @@
+DROP DATABASE IF EXISTS JoesTable;
+CREATE DATABASE JoesTable;
+USE JoesTable;
+CREATE TABLE Users (
+User_ID INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+Username VARCHAR(200) NOT NULL,
+UserPassword VARCHAR(200) NOT NULL,
+Email VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE Restaurants (
+Restaurant_ID INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+Name VARCHAR(200) NOT NULL,
+Address VARCHAR(200) NOT NULL,
+Img_url VARCHAR(200) NOT NULL,
+Url VARCHAR(200) NOT NULL,
+Cuisine VARCHAR(200) NOT NULL,
+Phone VARCHAR(200) NOT NULL,
+Rating INT(11) NOT NULL,
+Price VARCHAR(11) NOT NULL
+);
+/*
+INSERT INTO StudentInfo (SID, Name) VALUES (111, 'Jack Xu');
+INSERT INTO StudentInfo (SID, Name) VALUES (112, 'Daniel Mizrahi');
+INSERT INTO StudentInfo (SID, Name) VALUES (113, 'Emily Jin');
+*/
+
+CREATE TABLE Favorites (
+User_ID INT(11) NOT NULL,
+Restaurant_ID INT(11) NOT NULL,
+FOREIGN KEY (User_ID) REFERENCES Users(User_ID),
+FOREIGN KEY (Restaurant_ID) REFERENCES Restaurants(Restaurant_ID)
+);
+
+CREATE TABLE Reservations (
+User_ID INT(11) NOT NULL,
+Restaurant_ID INT(11) NOT NULL,
+Date VARCHAR(200) NOT NULL,
+Time VARCHAR(200) NOT NULL,
+Description VARCHAR(200) NOT NULL,
+FOREIGN KEY (User_ID) REFERENCES Users(User_ID),
+FOREIGN KEY (Restaurant_ID) REFERENCES Restaurants(Restaurant_ID)
+);
+
+/*
+INSERT INTO Grades (SID, ClassName, Grade) VALUES (111, 'ART123', 'F');
+INSERT INTO Grades (SID, ClassName, Grade) VALUES (113, 'REL100', 'D');
+INSERT INTO Grades (SID, ClassName, Grade) VALUES (113, 'ECO966', 'A-');
+INSERT INTO Grades (SID, ClassName, Grade) VALUES (111, 'BUS456', 'A-');
+INSERT INTO Grades (SID, ClassName, Grade) VALUES (113, 'BUS456', 'B+');
+INSERT INTO Grades (SID, ClassName, Grade) VALUES (112, 'BUS456', 'A');
+INSERT INTO Grades (SID, ClassName, Grade) VALUES (112, 'ECO966', 'B+');
+*/
+
+
+

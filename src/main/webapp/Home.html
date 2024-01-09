@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+    <title>Home</title>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFhuCov8-8DUoTh8d9nsAh3n3i3L5lxUo&callback=initMap"></script>
+    <link rel="stylesheet" type="text/css" href="Home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome.min.css">
+</head>
+<body>
+	 <div>
+    
+	 
+	 
+	 <div class = "hide_area">
+    <a class="reset-button"  href="Home.html">JoesTable!</a>
+    </div>
+	 
+	 <div id="options_guest">
+		 <a href="Home.html" class = "option2">Home</a>
+		 <a href="Login.html" class = "option1">Login/Signup</a>
+	<hr class="main-line">
+		</div>
+		
+		<div id="options_signin">
+		 <a href="Home.html" class = "option4">Home</a>
+		 <a href="Favorites.html" class = "option3">Favorites</a>
+		 <a href="Reservations.html" class = "option2">Reservations</a>
+		 <a href="Login.html" class = "option1">Logout</a>
+		 <hr class="main-line">
+		 
+			 <button onclick="fave()" class="favor" id="favor" style="display: none;"><i class="fa fa-star"></i> Add to Favorites</button>
+			 <button class="reserve" onclick="openReservations()" id="reserve" style="display: none;">Add Reservation</button>
+		
+		
+		<form method="get" id="reserveForm">
+		 <input type="date" id="reservationDate" class="reservationDate" placeholder="Date" required>
+		 <input type="time" id="reservationTime"class="reservationTime" placeholder="Time" required>
+		 <textarea id="reservationDesc" class="reservationDesc" placeholder="Reservation Notes" > </textarea>
+		 <button type="submit" id="reservationSub" class="reservationSub" style="color:white">Submit Reservation</button>
+	 </form>
+		</div>
+	 
+    
+    
+    
+		
+		
+		
+    <img class="banner" id="banner" src="Assignment 4 Home Page Image.jpg"></img>
+    <div id="map-overlay">
+        <div id="map"></div>
+	 </div>
+<form method="get" name="searchForm" id="SearchForm">
+<div class="grid-container">
+        <div class="grid-item item1">
+			<input type="text" id="restaurantName" placeholder="Restaurant Name" required>
+            <button type="submit" style="background-color: firebrick; color: white;" class="searchsub"><i class="fa fa-search"></i></button>
+		</div>
+        <div class="grid-item item2">
+			<div class="grid-item item20">
+			<label ><input type="radio" name="searchOption" id="sortby" value="best_match" required> Best Match</label>
+			</div>
+			<div class="grid-item item22">
+			 <label><input type="radio" name="searchOption" id="sortby" value="rating" required> Rating</label>
+            
+            </div>
+            <div class="grid-item item21">
+			<label><input type="radio" name="searchOption" id="sortby" value="review_count" required> Review Count</label>
+			</div>
+			<div class="grid-item item23">
+            <label><input type="radio" name="searchOption" id="sortby" value="distance" required> Distance</label>
+            
+            </div>
+		</div>
+        <div class="grid-item item3">
+			<input type="text" id="latitude" placeholder="Latitude" required>
+            <input type="text" id="longitude" placeholder="Longitude" required>
+		</div>
+        	
+        <div class="grid-item item4">
+			<button id="showMapButton" style="background-color:dodgerblue; color: white;"><i class="fa fa-map-marker"></i> Google Maps (Drop a pin!)</button>
+		</div>
+        
+    </div>
+</form>
+    <!-- Search Area 
+    <form method="get" id="SearchForm">
+    <div class="search-area">
+		<div id="map-overlay">
+		
+        <div id="map"></div>
+   		</div>
+   		
+        <div class="top-left">
+            <input type="text" id="restaurantName" placeholder="Restaurant Name">
+            <button type="submit" style="background-color: red; color: white;">Search</button>
+        </div>
+        <div class="top-right">
+            <label><input type="radio" name="searchOption" id="sortby" value="best_match"> Best Match</label>
+            <label><input type="radio" name="searchOption" id="sortby" value="review_count"> Review Count</label>
+            <label><input type="radio" name="searchOption" id="sortby" value="rating"> Rating</label>
+            <label><input type="radio" name="searchOption" id="sortby" value="distance"> Distance</label>
+        </div>
+        <div class="bottom-left">
+            <input type="text" id="latitude" placeholder="Latitude" required>
+            <input type="text" id="longitude" placeholder="Longitude" required>
+        </div>
+        <div class="bottom-right">
+            <button id="showMapButton" style="background-color: blue; color: white;">Google Maps</button>
+        </div>
+    </div>
+    </form>
+    -->
+    
+    </div>
+    <p class="res_text" id="res_text"></p>
+    <div id="searchResults">
+		<div id="search_results_hide">
+			
+		</div>
+		
+	</div>
+    
+    <script src="Home.js"></script>
+     
+	 
+</body>
+</html>
