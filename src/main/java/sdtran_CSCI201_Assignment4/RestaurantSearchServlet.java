@@ -87,7 +87,7 @@ public class RestaurantSearchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 
-        String API_KEY = "MFRvhO9HPd1vlzKW1859cw_iwc88PLyAvnatDqGKpe-SY0OzR0Edh8oZO4LL0gfhl5qjHaeK2XgSs1MWLmVMQb0iqMFGjhKQvnJ4a-BQK0ls6jIzQPZA3yDoBL45ZXYx";
+        String API_KEY = "APIKEY";
 		PrintWriter out = resp.getWriter();
 		String ulat = req.getParameter("lat");
 		String ulon = req.getParameter("lng");
