@@ -1,6 +1,8 @@
 <h1>Restaurant Review Web App</h1>
 The program allows users to search for restaurants, add them to their list of favorite restaurants, and schedule reservations for these restaurants. I implemented a database to keep track of user information and used a variety of different APIs.
 
+Video of the Demo can be found here: https://youtu.be/jMi_oj3Qsss 
+
 <h3>Description</h3>
 
 •	Independent software engineering class project utilizing HTML, CSS, JavaScript, Java, and SQL run on Apache Tomcat.
